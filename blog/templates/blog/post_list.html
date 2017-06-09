@@ -1,17 +1,36 @@
+{% load staticfiles %}
 <html>
     <head>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
         <title>Getting things set up</title>
     </head>
     <body>
         <div>
-            <h1><a href="">Getting things set up</a></h1>
+            <h1>Matrix Probablity</h1>
         </div>
-        {% for post in posts %}
-        <div>
-            <p>published: {{ post.published_date }}</p>
-            <h1><a href="">{{ post.title }}</a></h1>
-            <p>{{ post.text|linebreaksbr }}</p>
+        <div id="formBox">
+        <form action="/your-name/" method="post">
+            <label for="your_name">Begining State: </label>
+            <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+        </form>
+
+        <form action="/your-name/" method="post">
+            <label for="your_name">Ending State: </label>
+            <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+        </form>
+
+        <form action="/your-name/" method="post">
+            <label for="your_name">Probability: </label>
+            <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+        </form>
+
+        <form action="/your-name/" method="post">
+            <label for="your_name">Steps: </label>
+            <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+        </form>
+            <input type="submit" value="Submit for Calculation">
         </div>
-        {% endfor %}
     </body>
 </html>

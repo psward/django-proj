@@ -1,0 +1,14 @@
+h1 {
+    color: #FCA205;
+}
+
+body {
+    padding-left: 15px;
+}
+
+#formBox {
+    float: left;
+    width: 270px;
+    text-align: right;
+}
+
